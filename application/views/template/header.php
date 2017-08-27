@@ -11,7 +11,7 @@
 <title> Tech_Blog
 </title>
 <!--    <link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">-->
-    <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
     <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
 <!--    <script src="http://cdn.ckeditor.com/4.7.2/basic/ckeditor.js"></script>-->
     <script src="http://cdn.ckeditor.com/4.7.2/full/ckeditor.js"></script>
