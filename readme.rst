@@ -1,5 +1,6 @@
 ###################
-What is CodeIgniter
+What is Blog site
+
 ###################
 
 CodeIgniter is an Application Development Framework - a toolkit - for people
