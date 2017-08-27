@@ -6,5 +6,8 @@
  * Time: 10:24 PM
  */?>
 </div>
+<script>
+    CKEDITOR.replace('editor1');
+</script>
 </body>
 </html>
