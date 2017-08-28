@@ -1,6 +1,6 @@
 <h2><?php echo $post['title']?></h2>
 <small class="post-date">Posted on: <?php echo $post['created_at'];?></small>
-<img src="<?php echo site_url();?>assets/image/posts/<?php echo $post['post_image'];?>">
+<img src="<?php echo site_url();?>assets/images/posts/<?php echo $post['post_image'];?>">
 
 <br>
 <div class="post-body">

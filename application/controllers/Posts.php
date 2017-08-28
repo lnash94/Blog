@@ -46,7 +46,7 @@ class Posts extends CI_Controller{
         else{
             //upload image
             $config['upload_path']='./assets/images/posts';
-            $config['allowed_type']='gif|jpg|png';
+            $config['allowed_types']='gif|jpg|png';
             $config['max_size']='2048';
             $config['max_width']='500';
             $config['max_height']='500';
