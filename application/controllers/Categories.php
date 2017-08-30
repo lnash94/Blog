@@ -27,19 +27,14 @@ class Categories extends CI_Controller{
         }
         else{
             $this->category_model->create_category();
+
+            //set message
+            $this->session->set_flashdata('category_created','Your category has been created.');
+
+
             redirect('categories');
         }
     }
-    /*public  function create_category(){
-        $data = array(
-            'name'=>$this->input->post('name')
-        );
-        return $this->db->insert('categories',$data);
-    }*/
-    /*public function get_category($id){
-        $query = $this->db->get_where('categories',array('id'=>$id));
-        return $query
-    }*/
     public function posts($id){
         $data['title'] = $this->category_model->get_category($id)->name;
 
