@@ -7,6 +7,13 @@
  */
 class Categories extends CI_Controller{
     public function index(){
+        $data['title']='Categeroies';
+
+        $data['categories']=$this->category_model->get_categories();
+
+        $this->load->view('template/header');
+        $this->load->view('categories/index',$data);
+        $this->load->view('template/footer');
 
     }
     public function create(){
@@ -23,4 +30,27 @@ class Categories extends CI_Controller{
             redirect('categories');
         }
     }
+    /*public  function create_category(){
+        $data = array(
+            'name'=>$this->input->post('name')
+        );
+        return $this->db->insert('categories',$data);
+    }*/
+    /*public function get_category($id){
+        $query = $this->db->get_where('categories',array('id'=>$id));
+        return $query
+    }*/
+    public function posts($id){
+        $data['title'] = $this->category_model->get_category($id)->name;
+
+        $data['posts']=$this->post_model->get_posts_by_category($id);
+
+        $this->load->view('template/header');
+        $this->load->view('posts/index',$data);
+        $this->load->view('template/footer');
+
+
+
+    }
+
 }
