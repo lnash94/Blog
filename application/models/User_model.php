@@ -21,6 +21,33 @@ class User_model extends CI_Model
         //insert data
         return $this->db->insert('users', $data);
     }
+//    login user
+    public function login($username,$password){
+        //validate
+        $this->db->where('username',$username);
+        $this->db->where('password',$password);
+
+        $result= $this->db->get('users');
+
+        if ($result->num_rows()==1){
+            return $result->row(0)->id;
+        }
+        else{
+            return false;
+        }
+
+    /*$query = $this->db->get_where('users',array(
+            'username'=>$username,
+            'password'=>$password
+            ));
+        if($query->num_rows()==1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    */
+    }
 
     // Check username exists
     public function check_username_exists($username){

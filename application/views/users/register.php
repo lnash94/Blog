@@ -2,7 +2,7 @@
 <?php echo validation_errors();?>
 <!--user registration form-->
 <?php echo form_open('users/register');?>
-<div class="col-md-4 col-md-offset-4">
+<div class="col-md-6 col-md-offset-3">
     <h2><?= $title; ?></h2>
     <div class="form-group">
         <label>Name</label>
@@ -31,7 +31,7 @@
         <label>Confirm Password</label>
         <input type="password" class="form-control" name="password2" placeholder="Confirm password">
     </div>
-<button type="submit" class="btn btn-primary" name="">Submit</button>
+<button type="submit" class="btn btn-primary btn-block" name="">Submit</button>
 
 <?php echo  form_close();?>
 </div>

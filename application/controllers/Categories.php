@@ -17,6 +17,10 @@ class Categories extends CI_Controller{
 
     }
     public function create(){
+        //check login
+        if (!$this->session->userdata('logged_in')){
+            redirect('users/login');
+        }
         $data['title']='Create Category';
         $this->form_validation->set_rules('name','Name','required');
 
@@ -46,6 +50,18 @@ class Categories extends CI_Controller{
 
 
 
+    }
+    public function delete($id){
+        //check login
+        if (!$this->session->userdata('logged_in')){
+            redirect('users/login');
+        }
+        $this->category_model->delete_category($id);
+
+        //set message
+        $this->session->set_flashdata('category_deleted','Your category has been deleted');
+
+        redirect('categories');
     }
 
 }
